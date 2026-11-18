@@ -1,0 +1,32 @@
+# .antigravityrules — Cash Edge PWA (Dual-Mode: Vivo Multiway & GGPoker 6-Max)
+
+## 1. Identidad del Proyecto y Stack Obligatorio
+- **Aplicación:** Entrenador móvil de sesiones de 15 minutos para Texas Hold'em Cash Game (100 BB a 200 BB+ deep) con selector de régimen en cabecera:
+  1. `LIVE_MULTIWAY`: Mesas en vivo (sin rake o rake mínimo, stacks 100–200 BB, pozos 3-way/4-way, efecto sándwich, Squeeze vs. limpers/callers, transición 3-way Flop a 1 vs. 1 en Turn/River y folds disciplinados en River).
+  2. `GGPOKER_HIGH_RAKE`: Mesas online 6-Max (100 BB, impacto de rake alto, estrategia 3-Bet o Fold, guerra de ciegas SB vs. BB / BTN vs. BB, 3-Bet Pots y defensa contra overbets).
+- **Stack técnico:** React 18+, TypeScript estricto, Vite, Tailwind CSS, `lucide-react`, `vitest`, y configuración PWA (*Offline-First* con `manifest.json` y meta tags móviles).
+- **Arquitectura:** 100% client-side. Cero backend, cero APIs externas. Persistencia de historial, racha diaria y repetición espaciada de errores (*leaks*) en `localStorage`.
+
+## 2. Reglas de Dominio de Póker (Innegociables)
+- **Nomenclatura estricta:** Utilizar SIEMPRE `"All-in"`. Prohibido usar `"Jam"` o `"Shove"` en tipos, botones, JSON o textos de feedback.
+- **Estructuras flexibles:** Soportar visualización en BB y estructuras de ciegas configurables (ej. `$100/$200 ARS` para Modo Vivo y `NL5 / NL10 USD` para Modo GGPoker) y sizings flexibles.
+- **Fórmulas matemáticas exactas (Prohibido aproximar):**
+  - **Pozo Total Final:** `finalPot = currentPot + villainBet + heroCall` (incluir SIEMPRE el call propio en el denominador).
+  - **Pot Odds (%):** `(heroCall / finalPot) * 100`.
+  - **MDF Heads-Up (%):** `(1 - (villainBet / (currentPot + villainBet))) * 100`.
+  - **MDF Efectiva Multiway (%):** Con `N = Math.max(1, currentActivePlayers - 1)` defensores, `effectiveMdfPct = (1 - Math.pow(villainBet / (currentPot + villainBet), 1 / N)) * 100`.
+  - **SPR:** `effectiveStack / currentPot`. Umbrales: `<= 3.5` (`COMMITTED_LOW_SPR`), `3.5 a 8.0` (`MEDIUM_SPR_CAUTION`), `>= 8.0` (`DEEP_SPR_NUTS_ONLY`).
+  - **EV del Call:** `(realizedEquityPct / 100) * finalPot - heroCall`, aplicando factor de realización de equity (`EQR`) que penalice `OOP`, `SANDWICH`, jugadores extra y jugadores por hablar detrás.
+  - **Ratio Bluff-to-Value óptimo del rival:** `% Bluff = (villainBet / (currentPot + 2 * villainBet)) * 100` y `Bluffs por combo de valor = villainBet / (currentPot + villainBet)`.
+- **Parámetro de Transición (`PotTopology`):** Modelar `initialFlopPlayers`, `currentActivePlayers`, `playersToActBehind`, `isTransitionedToHU`, `transitionStreet` (`'Turn' | 'River' | null`) y `rangeFilterNote`. Al pasar de Multiway en Flop a 1 vs. 1 en Turn/River, la MDF vuelve a recaer 100% en un defensor, pero los rangos permanecen filtrados y más fuertes que en un pozo nacido Heads-Up.
+- **Auditoría Red-Team:** Todo spot curado debe mostrar en el feedback la explicación estructural + una alerta *Red-Team* indicando qué ajuste del rival invierte el signo del EV.
+
+## 3. Diseño UX/UI Mobile-First ("Zona del Pulgar")
+- **Estética:** Paleta oscura limpia y de alto contraste (`slate-950`, `slate-900`, bordes `slate-800`, `emerald-500` para +EV, `amber-400` para alertas de Transición/Precaución, `rose-500` para -EV/errores, `sky-500` para Modo GGPoker).
+- **Ergonomía de una mano:** Toda la botonera de acción (`Fold`, `Check`, `Call`, `Bet`, `Raise`, `Squeeze`, `All-in` y `Siguiente`) debe permanecer fija en el tercio inferior de la pantalla (`fixed bottom-0`) con áreas táctiles cómodas (`min-h-[48px]`).
+- **Cartas legibles:** Renderizar cartas con palo diferenciado (4 colores: picas gris/negro, corazones rojo, diamantes azul, tréboles verde) para lectura instantánea sin fatiga visual.
+
+## 4. Estándares de Código y Cero Regresión
+- **Cero truncamiento:** Todos los archivos deben estar completos y compilar sin errores (`tsc --noEmit` y `npm run build`).
+- **Red local:** Configurar `vite.config.ts` con `server: { host: true, port: 5173 }` para pruebas inmediatas en el celular vía Wi-Fi.
+- **Pruebas unitarias obligatorias:** Validar `src/engine/pokerMath.ts` con Vitest (Pot Odds, colapso de MDF 4-way, recuperación de MDF en transición a HU, SPR y EV).

@@ -1,0 +1,1006 @@
+[
+  {
+    "id": "live-squeeze-01",
+    "regime": "LIVE_MULTIWAY",
+    "module": "PREFLOP_SQUEEZE",
+    "title": "Squeeze IP vs Open + 2 Callers",
+    "street": "Preflop",
+    "blindStructure": {
+      "id": "live-ars-100-200",
+      "label": "$100/$200 ARS (Vivo)",
+      "currency": "ARS",
+      "smallBlind": 100,
+      "bigBlind": 200,
+      "rakePct": 0,
+      "rakeCapBb": 0
+    },
+    "heroPosition": "BTN",
+    "heroCards": ["As", "Qs"],
+    "boardCards": [],
+    "actionHistory": [
+      "MP (Loose-Passive) abre a 4 BB ($800 ARS)",
+      "CO y HJ pagan 4 BB cada uno (pozo: 13.5 BB)",
+      "Hero en BTN (150 BB efectivas) tiene AsQs"
+    ],
+    "villain": {
+      "name": "Reg Recreacional MP",
+      "position": "MP",
+      "archetype": "Loose-Passive",
+      "tendencySummary": "Abre amplio con suited connectors y pares medios; foldea seguido a 3-Bet/Squeeze grandes.",
+      "statsBadge": "VPIP 42% / Fold to 3B 64%"
+    },
+    "topology": {
+      "initialFlopPlayers": 4,
+      "currentActivePlayers": 4,
+      "playersToActBehind": 2,
+      "heroRelativePosition": "IP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 9.5,
+      "villainBet": 4,
+      "heroCall": 4,
+      "effectiveStack": 146,
+      "rawEquityPct": 45,
+      "topology": {
+        "initialFlopPlayers": 4,
+        "currentActivePlayers": 4,
+        "playersToActBehind": 2,
+        "heroRelativePosition": "IP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "LIVE_MULTIWAY",
+      "street": "Preflop"
+    },
+    "availableActions": ["Fold", "Call", "Squeeze", "All-in"],
+    "correctAction": "Squeeze",
+    "recommendedSizing": "18 BB ($3.600 ARS)",
+    "structuralExplanation": "Pagar en BTN parece tentador (22.9% Pot Odds y +1.51 BB de EV nominal en call), pero invita a SB y BB a completar, creando un pozo 5-way o 6-way donde la EQR cae a 0.70 (31.5% de equity realizada). Un Squeeze grande de 18 BB (4.5x + 1x por cada caller) captura los 13.5 BB de dinero muerto en mesa sin rake o te aísla IP con iniciativa y ventaja de cartas altas frente a un rango muy capeado.",
+    "redTeamAlert": "Si el agresor inicial en MP es un Nit extremo con 4-Bet solo AA/KK y los dos callers son estaciones que nunca foldean preflop (Fold to Squeeze < 25%), el valor esperado de aislarse baja drásticamente y debes evaluar call para jugar IP con nut flush potencial."
+  },
+  {
+    "id": "live-squeeze-02",
+    "regime": "LIVE_MULTIWAY",
+    "module": "PREFLOP_SQUEEZE",
+    "title": "Squeeze OOP desde BB con Par Alto",
+    "street": "Preflop",
+    "blindStructure": {
+      "id": "live-ars-100-200",
+      "label": "$100/$200 ARS (Vivo)",
+      "currency": "ARS",
+      "smallBlind": 100,
+      "bigBlind": 200,
+      "rakePct": 0,
+      "rakeCapBb": 0
+    },
+    "heroPosition": "BB",
+    "heroCards": ["Js", "Jc"],
+    "boardCards": [],
+    "actionHistory": [
+      "UTG abre a 3.5 BB ($700 ARS)",
+      "MP, CO y BTN pagan 3.5 BB en cascada (SB foldea)",
+      "Hero en BB (180 BB efectivas) enfrenta 2.5 BB adicionales"
+    ],
+    "villain": {
+      "name": "Mesa Viva en Cascada",
+      "position": "UTG",
+      "archetype": "Loose-Passive",
+      "tendencySummary": "UTG abre lineal; los callers intermedios tienen pares bajos y broadways offsuit débiles.",
+      "statsBadge": "4-Way Callers / Pasivos"
+    },
+    "topology": {
+      "initialFlopPlayers": 5,
+      "currentActivePlayers": 5,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "OOP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 12,
+      "villainBet": 3.5,
+      "heroCall": 2.5,
+      "effectiveStack": 179,
+      "rawEquityPct": 36,
+      "topology": {
+        "initialFlopPlayers": 5,
+        "currentActivePlayers": 5,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "OOP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "LIVE_MULTIWAY",
+      "street": "Preflop"
+    },
+    "availableActions": ["Fold", "Call", "Squeeze", "All-in"],
+    "correctAction": "Squeeze",
+    "recommendedSizing": "20 BB ($4.000 ARS)",
+    "structuralExplanation": "Aunque completar cuesta poco (13.9% Pot Odds y +1.65 BB de EV en call pasivo), con 5 jugadores al Flop OOP tu EQR cae a 0.64 (23.0% de equity realizada): JJ se convierte en puro set-mining porque cualquier overcard (A, K, Q) destruye tu mano. Aplicar Squeeze a 20 BB ($4.000 ARS) elimina a los callers especulativos, reduce el SPR si uno paga y captura las 15.5 BB muertas con alta frecuencia.",
+    "redTeamAlert": "Si UTG abre < 8% desde temprana posición y suele hacer limp-trap o 4-Bet All-in con QQ+/AK y además CO/BTN son jugadores sticky que pagan Squeezes de 20 BB en bloque, la varianza OOP se dispara y el set-mining con 180 BB vuelve a ser competitivo."
+  },
+  {
+    "id": "live-flop-01",
+    "regime": "LIVE_MULTIWAY",
+    "module": "MULTIWAY_FLOP",
+    "title": "Efecto Sándwich en Flop 4-Way",
+    "street": "Flop",
+    "blindStructure": {
+      "id": "live-ars-100-200",
+      "label": "$100/$200 ARS (Vivo)",
+      "currency": "ARS",
+      "smallBlind": 100,
+      "bigBlind": 200,
+      "rakePct": 0,
+      "rakeCapBb": 0
+    },
+    "heroPosition": "MP",
+    "heroCards": ["Kh", "Jc"],
+    "boardCards": ["Ks", "9s", "6d"],
+    "actionHistory": [
+      "Pozo limpeado/subido 4-way (20 BB en Flop)",
+      "UTG (Nit) apuesta 14 BB (70% pot) en Ks9s6d",
+      "Hero en MP queda en Sándwich con CO y BTN por hablar detrás"
+    ],
+    "villain": {
+      "name": "Regular Tight UTG",
+      "position": "UTG",
+      "archetype": "Nit-Omission",
+      "tendencySummary": "En pozos 4-way casi nunca hace c-bet sin top pair fuerte (AK/KQ), set o combo draw nut.",
+      "statsBadge": "C-Bet MW 28%"
+    },
+    "topology": {
+      "initialFlopPlayers": 4,
+      "currentActivePlayers": 4,
+      "playersToActBehind": 2,
+      "heroRelativePosition": "SANDWICH",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 20,
+      "villainBet": 14,
+      "heroCall": 14,
+      "effectiveStack": 135,
+      "rawEquityPct": 44,
+      "topology": {
+        "initialFlopPlayers": 4,
+        "currentActivePlayers": 4,
+        "playersToActBehind": 2,
+        "heroRelativePosition": "SANDWICH",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "LIVE_MULTIWAY",
+      "street": "Flop"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Fold",
+    "recommendedSizing": null,
+    "structuralExplanation": "Efecto Sándwich clásico: la MDF Heads-Up sería 58.8%, pero con 3 defensores la MDF efectiva colapsa a 25.6% por jugador. Además tu EQR cae al mínimo (0.50) por estar en medio con 2 rivales detrás capaces de hacer check-raise con sets (99, 66) o combo draws. Necesitas 29.2% de Pot Odds y tu equity realizada es apenas 22.0% (-3.44 BB de EV).",
+    "redTeamAlert": "Solo si UTG fuera un maniaco que apuesta 70% pot con aire puro en 4-way y ambos jugadores detrás (CO y BTN) fueran extremadamente pasivos (fold automático > 85%), tu equity realizada subiría lo suficiente para justificar pagar una calle."
+  },
+  {
+    "id": "live-flop-02",
+    "regime": "LIVE_MULTIWAY",
+    "module": "MULTIWAY_FLOP",
+    "title": "Combo Draw Nut IP Cerrando Acción 3-Way",
+    "street": "Flop",
+    "blindStructure": {
+      "id": "live-ars-100-200",
+      "label": "$100/$200 ARS (Vivo)",
+      "currency": "ARS",
+      "smallBlind": 100,
+      "bigBlind": 200,
+      "rakePct": 0,
+      "rakeCapBb": 0
+    },
+    "heroPosition": "BTN",
+    "heroCards": ["As", "Ts"],
+    "boardCards": ["Qs", "Js", "4c"],
+    "actionHistory": [
+      "Pozo 3-way (18 BB iniciales). SB donkea 9 BB y MP paga 9 BB (pozo previo al call: 27 BB)",
+      "Hero en BTN (148 BB efectivas) cierra acción IP con Nut Flush Draw + Gutshot + Overcard"
+    ],
+    "villain": {
+      "name": "SB Recreacional + MP Caller",
+      "position": "SB",
+      "archetype": "Loose-Passive",
+      "tendencySummary": "SB apuesta manos hechas vulnerables (Qx, Jx); MP paga con pares medios y draws menores.",
+      "statsBadge": "3-Way / Sin check-raise detrás"
+    },
+    "topology": {
+      "initialFlopPlayers": 3,
+      "currentActivePlayers": 3,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "IP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 27,
+      "villainBet": 9,
+      "heroCall": 9,
+      "effectiveStack": 148,
+      "rawEquityPct": 46,
+      "topology": {
+        "initialFlopPlayers": 3,
+        "currentActivePlayers": 3,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "IP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "LIVE_MULTIWAY",
+      "street": "Flop"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Call",
+    "recommendedSizing": null,
+    "structuralExplanation": "A diferencia del efecto sándwich, aquí cierras la acción IP sin jugadores detrás (EQR = 0.92) y necesitas apenas 20.0% de Pot Odds (9 BB para un pozo final de 45 BB). Tus 12+ outs a las nuts (9 picas + 3 reyes + ases parciales) realizan un 42.3% de equity (+10.04 BB de EV), además de retener enormes implied odds contra dos rivales con 148 BB detrás.",
+    "redTeamAlert": "Subir (Raise) en Flop puede aislar contra los sets (QQ/JJ/44) de SB/MP y expulsar a los colores dominados (KsXs, QsXs) que te pagan la caja entera en Turn/River cuando completas las nuts."
+  },
+  {
+    "id": "live-trans-01",
+    "regime": "LIVE_MULTIWAY",
+    "module": "TRANSITION_TURN_RIVER",
+    "title": "Transición 3-Way Flop → Turn HU (MDF Recupera)",
+    "street": "Turn",
+    "blindStructure": {
+      "id": "live-ars-100-200",
+      "label": "$100/$200 ARS (Vivo)",
+      "currency": "ARS",
+      "smallBlind": 100,
+      "bigBlind": 200,
+      "rakePct": 0,
+      "rakeCapBb": 0
+    },
+    "heroPosition": "BTN",
+    "heroCards": ["Ac", "Qd"],
+    "boardCards": ["Qh", "8s", "4d", "2c"],
+    "actionHistory": [
+      "Flop 3-way: HJ apostó pequeño y CO + BTN pagaron",
+      "Turn 2c (pozo 36 BB): HJ barrela 24 BB (67% pot) y CO foldea",
+      "Ahora quedan 1 vs. 1 (Hero IP con 96 BB efectivas)"
+    ],
+    "villain": {
+      "name": "HJ Semi-Agresivo",
+      "position": "HJ",
+      "archetype": "TAG-Regular",
+      "tendencySummary": "Sigue barrileando Turn con QJ/QT, proyectos de diamantes/corazones y overcards con backdoors.",
+      "statsBadge": "Turn Barrel 54%"
+    },
+    "topology": {
+      "initialFlopPlayers": 3,
+      "currentActivePlayers": 2,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "IP",
+      "isTransitionedToHU": true,
+      "transitionStreet": "Turn",
+      "rangeFilterNote": "Flop 3-way limpiado a HU en Turn: la MDF vuelve a recaer 100% en ti (60.0%), aunque el agresor HJ ya filtró sus faroles débiles en Flop."
+    },
+    "mathInput": {
+      "currentPot": 36,
+      "villainBet": 24,
+      "heroCall": 24,
+      "effectiveStack": 96,
+      "rawEquityPct": 58,
+      "topology": {
+        "initialFlopPlayers": 3,
+        "currentActivePlayers": 2,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "IP",
+        "isTransitionedToHU": true,
+        "transitionStreet": "Turn",
+        "rangeFilterNote": "Flop 3-way limpiado a HU en Turn: la MDF vuelve a recaer 100% en ti (60.0%), aunque el agresor HJ ya filtró sus faroles débiles en Flop."
+      },
+      "regime": "LIVE_MULTIWAY",
+      "street": "Turn"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Call",
+    "recommendedSizing": null,
+    "structuralExplanation": "Al foldear CO en el Turn, el pozo deja de ser multiway y la responsabilidad de defensa (MDF) sube de ~36.8% a 60.0% totalmente sobre Hero. Con SPR 2.67 (COMMITTED_LOW_SPR) y TPTK sin bloquear proyectos fallidos de corazón/diamante, tu equity realizada (55.7%) aplasta el 28.6% de Pot Odds requerido (+22.77 BB de EV).",
+    "redTeamAlert": "Si HJ fuera un jugador ultra-pasivo que nunca barrela Turn sin dobles parejas+ (AQ/QQ/88/44) cuando hubo dos callers en Flop, el rango filtrado en Turn te deja cerca de drawing dead y convierte el call en -EV."
+  },
+  {
+    "id": "live-trans-02",
+    "regime": "LIVE_MULTIWAY",
+    "module": "TRANSITION_TURN_RIVER",
+    "title": "Transición 4-Way Flop → River HU (Rango Ultra-Filtrado)",
+    "street": "River",
+    "blindStructure": {
+      "id": "live-ars-100-200",
+      "label": "$100/$200 ARS (Vivo)",
+      "currency": "ARS",
+      "smallBlind": 100,
+      "bigBlind": 200,
+      "rakePct": 0,
+      "rakeCapBb": 0
+    },
+    "heroPosition": "BTN",
+    "heroCards": ["Kd", "Qd"],
+    "boardCards": ["Ks", "Ts", "5c", "2h", "9d"],
+    "actionHistory": [
+      "Flop 4-way: UTG apostó, MP, BB y BTN pagaron",
+      "Turn 2h: UTG barrileó fuerte, MP y BB foldearon; solo Hero pagó (Transición a HU)",
+      "River 9d (pozo 70 BB): UTG mete tercer barril de 56 BB (80% pot)"
+    ],
+    "villain": {
+      "name": "UTG Tight-Lineal",
+      "position": "UTG",
+      "archetype": "Nit-Omission",
+      "tendencySummary": "Casi no tiene 3-barrel bluffs después de haber apostado contra 3 rivales en Flop.",
+      "statsBadge": "River Triple Barrel < 15% Bluff"
+    },
+    "topology": {
+      "initialFlopPlayers": 4,
+      "currentActivePlayers": 2,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "IP",
+      "isTransitionedToHU": true,
+      "transitionStreet": "Turn",
+      "rangeFilterNote": "Nacido 4-way en Flop y reducido a HU en Turn: aunque la MDF HU marca 55.6%, el rango de UTG sobrevivió 3 calles de filtrado contra 3 rivales y es extremadamente polarizado hacia valor."
+    },
+    "mathInput": {
+      "currentPot": 70,
+      "villainBet": 56,
+      "heroCall": 56,
+      "effectiveStack": 85,
+      "rawEquityPct": 21,
+      "topology": {
+        "initialFlopPlayers": 4,
+        "currentActivePlayers": 2,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "IP",
+        "isTransitionedToHU": true,
+        "transitionStreet": "Turn",
+        "rangeFilterNote": "Nacido 4-way en Flop y reducido a HU en Turn: aunque la MDF HU marca 55.6%, el rango de UTG sobrevivió 3 calles de filtrado contra 3 rivales y es extremadamente polarizado hacia valor."
+      },
+      "regime": "LIVE_MULTIWAY",
+      "street": "River"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Fold",
+    "recommendedSizing": null,
+    "structuralExplanation": "Trampa clásica de aplicar MDF ciega tras una transición: en teoría 1v1 deberías defender el 55.6%, pero UTG empezó apostando en un Flop 4-way donde su frecuencia de farol ya era mínima y completó QJ con el 9d en River. En River vas directo al showdown (EQR = 1.00), pero con 21.0% de equity frente a 30.8% de Pot Odds, pagar pierde -17.78 BB.",
+    "redTeamAlert": "Solo si UTG es un LAG capaz de convertir pares bajos o AsXs fallidos en 3 barriles sabiendo que tu rango en BTN está capeado (sin KK/TT/AK), el ratio de bluffs reales del rival supera el 30.8% óptimo y vuelve rentable el hero-call."
+  },
+  {
+    "id": "live-river-01",
+    "regime": "LIVE_MULTIWAY",
+    "module": "RIVER_EXPLOIT",
+    "title": "Fold Disciplinado ante Donk-Bet Fuerte en River",
+    "street": "River",
+    "blindStructure": {
+      "id": "live-ars-100-200",
+      "label": "$100/$200 ARS (Vivo)",
+      "currency": "ARS",
+      "smallBlind": 100,
+      "bigBlind": 200,
+      "rakePct": 0,
+      "rakeCapBb": 0
+    },
+    "heroPosition": "BTN",
+    "heroCards": ["Ad", "Kc"],
+    "boardCards": ["Ah", "9c", "5d", "3s", "7h"],
+    "actionHistory": [
+      "Hero c-beteó Flop y Turn IP; BB pagó dos calles",
+      "River 7h (pozo 78 BB): BB sale donkeando fuerte 65 BB (83% pot)",
+      "Hero con TPTK enfrenta 65 BB con 145 BB efectivas"
+    ],
+    "villain": {
+      "name": "Estación Pasiva BB",
+      "position": "BB",
+      "archetype": "Loose-Passive",
+      "tendencySummary": "Paga Flop/Turn con dobles chicas, sets lentos o gutshots 64s; solo lidera River cuando mejora.",
+      "statsBadge": "WWSF 34% / River Donk 90% Valor"
+    },
+    "topology": {
+      "initialFlopPlayers": 2,
+      "currentActivePlayers": 2,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "IP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 78,
+      "villainBet": 65,
+      "heroCall": 65,
+      "effectiveStack": 145,
+      "rawEquityPct": 14,
+      "topology": {
+        "initialFlopPlayers": 2,
+        "currentActivePlayers": 2,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "IP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "LIVE_MULTIWAY",
+      "street": "River"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Fold",
+    "recommendedSizing": null,
+    "structuralExplanation": "En teoría GTO, BB necesitaría 31.3% de faroles en su apuesta de 65 BB (0.45 bluffs por combo de valor), igualando el 31.3% de Pot Odds requerido. Pero el pool vivo recreacional casi nunca convierte pares rotos en donk-bets de 83% pot en River: su línea representa A9, A7, A5, 55, 33 o 64s completado, dejándote apenas 14.0% de equity en showdown (EQR = 1.00) y un call de -35.88 BB.",
+    "redTeamAlert": "Si el villano ya mostró en la sesión que hace donk-bets gigantes en River por frustración con KQ/KJ o proyectos de escalera bajos fallidos cuando el board es seco, pagar con TPTK pasa a ser claramente ganador."
+  },
+  {
+    "id": "live-river-02",
+    "regime": "LIVE_MULTIWAY",
+    "module": "RIVER_EXPLOIT",
+    "title": "Bluffcatcher con Blockers vs Barril de LAG",
+    "street": "River",
+    "blindStructure": {
+      "id": "live-ars-100-200",
+      "label": "$100/$200 ARS (Vivo)",
+      "currency": "ARS",
+      "smallBlind": 100,
+      "bigBlind": 200,
+      "rakePct": 0,
+      "rakeCapBb": 0
+    },
+    "heroPosition": "BTN",
+    "heroCards": ["Ac", "Qd"],
+    "boardCards": ["Qs", "Jc", "Td", "4s", "2d"],
+    "actionHistory": [
+      "BTN pagó 3-Bet o defendió IP; BB (LAG) apostó Flop y Turn",
+      "River 2d (pozo 44 BB): BB mete tercer barril de 33 BB (75% pot)",
+      "Hero tiene AcQd (80 BB efectivas)"
+    ],
+    "villain": {
+      "name": "Maniaco Agresivo BB",
+      "position": "BB",
+      "archetype": "LAG-Maniac",
+      "tendencySummary": "Dispara todos sus proyectos fallidos de picas y broadways débiles sin valor de showdown.",
+      "statsBadge": "Agg Factor 4.2 / Missed Draws"
+    },
+    "topology": {
+      "initialFlopPlayers": 2,
+      "currentActivePlayers": 2,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "IP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 44,
+      "villainBet": 33,
+      "heroCall": 33,
+      "effectiveStack": 80,
+      "rawEquityPct": 44,
+      "topology": {
+        "initialFlopPlayers": 2,
+        "currentActivePlayers": 2,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "IP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "LIVE_MULTIWAY",
+      "street": "River"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Call",
+    "recommendedSizing": null,
+    "structuralExplanation": "Tus cartas son óptimas para ir al showdown (EQR = 1.00): AcQd bloquea la escalera nut (AK) y combos de valor como AA/QQ/AQ, mientras NO tienes ninguna pica (s), dejando totalmente vivos los proyectos de color fallidos (Ks9s, 9s8s, 7s6s, 8s7s). Necesitas 30.0% de Pot Odds y realizas el 44.0% completo de tu equity (+15.40 BB de EV).",
+    "redTeamAlert": "Si el rival en BB nunca barrela proyectos de color fallidos en River y hace check-give-up en 2d con sus picas, su frecuencia real de faroles cae por debajo de 0.43 bluffs por combo de valor y el call se vuelve perdedor."
+  },
+  {
+    "id": "gg-pre-01",
+    "regime": "GGPOKER_HIGH_RAKE",
+    "module": "PREFLOP_3BET_OR_FOLD",
+    "title": "Castigar Cold Call en HJ por Rake Alto",
+    "street": "Preflop",
+    "blindStructure": {
+      "id": "gg-nl10-usd",
+      "label": "NL10 $0.05/$0.10 USD",
+      "currency": "USD",
+      "smallBlind": 0.05,
+      "bigBlind": 0.1,
+      "rakePct": 5,
+      "rakeCapBb": 3
+    },
+    "heroPosition": "HJ",
+    "heroCards": ["Kh", "Jd"],
+    "boardCards": [],
+    "actionHistory": [
+      "UTG (TAG 6-Max) abre a 2.5 BB ($0.25 USD)",
+      "Hero en HJ (100 BB) tiene KhJd con CO, BTN, SB y BB detrás"
+    ],
+    "villain": {
+      "name": "Reg 6-Max UTG",
+      "position": "UTG",
+      "archetype": "Pool-6Max-Reg",
+      "tendencySummary": "Rango de apertura UTG sólido (~16%): AK, AQ, KQ, ATs+, pares 66+.",
+      "statsBadge": "UTG RFI 16% / High Rake"
+    },
+    "topology": {
+      "initialFlopPlayers": 3,
+      "currentActivePlayers": 3,
+      "playersToActBehind": 4,
+      "heroRelativePosition": "SANDWICH",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 1.5,
+      "villainBet": 2.5,
+      "heroCall": 2.5,
+      "effectiveStack": 97.5,
+      "rawEquityPct": 43,
+      "topology": {
+        "initialFlopPlayers": 3,
+        "currentActivePlayers": 3,
+        "playersToActBehind": 4,
+        "heroRelativePosition": "SANDWICH",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "GGPOKER_HIGH_RAKE",
+      "street": "Preflop"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Fold",
+    "recommendedSizing": null,
+    "structuralExplanation": "En GGPoker 6-Max con rake del 5% (cap 3 BB), hacer cold call en HJ con KJo destruye tu winrate: estás dominado por AK/KQ/AJ de UTG, tienes 4 jugadores agresivos detrás listos para hacer Squeeze (EQR = 0.40) y cada vez que ves un Flop pagas el drop del rake. Frente a 38.5% de Pot Odds, solo realizas 17.2% (-1.38 BB de EV).",
+    "redTeamAlert": "Solo si UTG fuera un jugador recreacional con RFI > 40% y hubiera un fish pasivo en BB con fold casi nulo, podrías incluir KJo como 3-Bet lineal para aislarlo IP; pero nunca como cold call."
+  },
+  {
+    "id": "gg-pre-02",
+    "regime": "GGPOKER_HIGH_RAKE",
+    "module": "PREFLOP_3BET_OR_FOLD",
+    "title": "3-Bet IP en BTN por Política No Flop No Drop",
+    "street": "Preflop",
+    "blindStructure": {
+      "id": "gg-nl10-usd",
+      "label": "NL10 $0.05/$0.10 USD",
+      "currency": "USD",
+      "smallBlind": 0.05,
+      "bigBlind": 0.1,
+      "rakePct": 5,
+      "rakeCapBb": 3
+    },
+    "heroPosition": "BTN",
+    "heroCards": ["As", "5s"],
+    "boardCards": [],
+    "actionHistory": [
+      "CO (Reg 6-Max) abre a 2.5 BB ($0.25 USD)",
+      "Hero en BTN (100 BB efectivas) recibe As5s"
+    ],
+    "villain": {
+      "name": "Regular CO 6-Max",
+      "position": "CO",
+      "archetype": "Pool-6Max-Reg",
+      "tendencySummary": "Abre 28% desde CO y foldea ~55% ante 3-Bet de BTN.",
+      "statsBadge": "CO RFI 28% / Fold to 3B 55%"
+    },
+    "topology": {
+      "initialFlopPlayers": 2,
+      "currentActivePlayers": 2,
+      "playersToActBehind": 2,
+      "heroRelativePosition": "IP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 1.5,
+      "villainBet": 2.5,
+      "heroCall": 2.5,
+      "effectiveStack": 97.5,
+      "rawEquityPct": 46,
+      "topology": {
+        "initialFlopPlayers": 2,
+        "currentActivePlayers": 2,
+        "playersToActBehind": 2,
+        "heroRelativePosition": "IP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "GGPOKER_HIGH_RAKE",
+      "street": "Preflop"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Raise",
+    "recommendedSizing": "7.5 BB ($0.75 USD)",
+    "structuralExplanation": "En entornos de rake alto (5%), pagar el open exige 38.5% de Pot Odds mientras tu equity realizada cae a 37.7% (EQR = 0.82 por rake y ciegas detrás, dejando el call en -0.05 BB). La estrategia 3-Bet o Fold a 7.5 BB maximiza 'No Flop, No Drop': cuando CO foldea ganas las 4 BB muertas sin rake, y si paga juegas 1 vs. 1 IP con blocker de As y potencial de color máximo.",
+    "redTeamAlert": "Si CO nunca foldea a 3-Bet (Fold to 3B < 30%) y realiza un 4-Bet polarizado muy alto con stacks de 100 BB, debes reducir tus 3-bets de Ases bajos y balancear más hacia manos lineales como ATs/KQs."
+  },
+  {
+    "id": "gg-bvb-01",
+    "regime": "GGPOKER_HIGH_RAKE",
+    "module": "BLIND_VS_BLIND",
+    "title": "Guerra de Ciegas SB vs BB vs C-Bet Pequeña",
+    "street": "Flop",
+    "blindStructure": {
+      "id": "gg-nl10-usd",
+      "label": "NL10 $0.05/$0.10 USD",
+      "currency": "USD",
+      "smallBlind": 0.05,
+      "bigBlind": 0.1,
+      "rakePct": 5,
+      "rakeCapBb": 3
+    },
+    "heroPosition": "BB",
+    "heroCards": ["Qd", "9d"],
+    "boardCards": ["Jd", "8s", "4c"],
+    "actionHistory": [
+      "SB abre a 3 BB y Hero defiende BB (pozo en Flop: 6 BB)",
+      "Flop Jd8s4c: SB apuesta 2 BB (33% pot)",
+      "Hero en BB (97 BB efectivas) juega IP postflop"
+    ],
+    "villain": {
+      "name": "Regular SB 6-Max",
+      "position": "SB",
+      "archetype": "TAG-Regular",
+      "tendencySummary": "Hace c-bet de rango al 75%+ por 33% pot en tableros medios SB vs BB.",
+      "statsBadge": "BvB C-Bet 76% (1/3 pot)"
+    },
+    "topology": {
+      "initialFlopPlayers": 2,
+      "currentActivePlayers": 2,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "IP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 6,
+      "villainBet": 2,
+      "heroCall": 2,
+      "effectiveStack": 97,
+      "rawEquityPct": 44,
+      "topology": {
+        "initialFlopPlayers": 2,
+        "currentActivePlayers": 2,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "IP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "GGPOKER_HIGH_RAKE",
+      "street": "Flop"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Call",
+    "recommendedSizing": null,
+    "structuralExplanation": "Contra una c-bet de 33% pot en guerra de ciegas, la MDF te exige defender el 75.0% de tu rango y las Pot Odds son apenas 20.0%. Con Qd9d IP tienes gutshot a las nuts (T), backdoor flush draw de diamantes y overcard Q frente a un rango amplísimo de SB. Realizas 42.2% de equity (+2.22 BB de EV).",
+    "redTeamAlert": "Si foldeas manos con backdoor flush + gutshot + overcard ante apuestas de 1/3 en BvB, permitirás que SB imprima dinero con cualquier par de cartas altas/bajas (auto-profit inmediato)."
+  },
+  {
+    "id": "gg-bvb-02",
+    "regime": "GGPOKER_HIGH_RAKE",
+    "module": "BLIND_VS_BLIND",
+    "title": "BTN vs BB en Turn: Defender Top Pair OOP",
+    "street": "Turn",
+    "blindStructure": {
+      "id": "gg-nl10-usd",
+      "label": "NL10 $0.05/$0.10 USD",
+      "currency": "USD",
+      "smallBlind": 0.05,
+      "bigBlind": 0.1,
+      "rakePct": 5,
+      "rakeCapBb": 3
+    },
+    "heroPosition": "BB",
+    "heroCards": ["Ks", "Tc"],
+    "boardCards": ["Kh", "7s", "3d", "9c"],
+    "actionHistory": [
+      "BTN abre 2.5 BB, BB paga. Flop Kh7s3d: check-call a 1.75 BB (pozo: 9 BB)",
+      "Turn 9c: Hero checkea OOP, BTN barrela 6.75 BB (75% pot)",
+      "Hero tiene KsTc con 95.75 BB efectivas"
+    ],
+    "villain": {
+      "name": "Regular BTN Agresivo",
+      "position": "BTN",
+      "archetype": "Pool-6Max-Reg",
+      "tendencySummary": "Barrila Turn con QJ, QT, JT, proyectos 86s/65s, picas backdoor y Kx medios.",
+      "statsBadge": "BTN Turn C-Bet 58%"
+    },
+    "topology": {
+      "initialFlopPlayers": 2,
+      "currentActivePlayers": 2,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "OOP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 9,
+      "villainBet": 6.75,
+      "heroCall": 6.75,
+      "effectiveStack": 95.75,
+      "rawEquityPct": 52,
+      "topology": {
+        "initialFlopPlayers": 2,
+        "currentActivePlayers": 2,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "OOP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "GGPOKER_HIGH_RAKE",
+      "street": "Turn"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Call",
+    "recommendedSizing": null,
+    "structuralExplanation": "En defensa BTN vs BB, KTo se ubica en la parte media-alta de tu rango capeado (no hiciste 3-Bet ni check-raise en Flop). Aunque estás OOP (EQR = 0.84), la MDF pide defender 57.1% y necesitas 30.0% de Pot Odds. Contra el amplio rango de barriles de BTN, KsTc realiza 43.7% de equity (+3.08 BB de EV).",
+    "redTeamAlert": "Ten precaución porque tu Tc bloquea algunos faroles naturales de BTN como QTs/JTs; si el rival nunca barrela Turn sin KQ+ o dos pares en board K-alto, debes estrechar tu defensa al River."
+  },
+  {
+    "id": "gg-3bp-01",
+    "regime": "GGPOKER_HIGH_RAKE",
+    "module": "THREE_BET_POT",
+    "title": "3-Bet Pot SPR Bajo: All-in por Valor en Turn",
+    "street": "Turn",
+    "blindStructure": {
+      "id": "gg-nl10-usd",
+      "label": "NL10 $0.05/$0.10 USD",
+      "currency": "USD",
+      "smallBlind": 0.05,
+      "bigBlind": 0.1,
+      "rakePct": 5,
+      "rakeCapBb": 3
+    },
+    "heroPosition": "BTN",
+    "heroCards": ["Ad", "As"],
+    "boardCards": ["Jh", "8s", "5s", "2c"],
+    "actionHistory": [
+      "CO abrió 2.5 BB, BTN 3-beteó a 8.5 BB, CO pagó",
+      "Flop Jh8s5s: CO check-call a 11.75 BB (pozo: 42 BB)",
+      "Turn 2c: CO sale con block-bet de 14 BB (stack efectivo restante: 74 BB)"
+    ],
+    "villain": {
+      "name": "Reg CO en 3-Bet Pot",
+      "position": "CO",
+      "archetype": "Pool-6Max-Reg",
+      "tendencySummary": "Block-betea en Turn con top pair (AJ, KJ, QJ), pares QQ/TT o combo draws de picas.",
+      "statsBadge": "SPR 1.76 / Committed"
+    },
+    "topology": {
+      "initialFlopPlayers": 2,
+      "currentActivePlayers": 2,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "IP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 42,
+      "villainBet": 14,
+      "heroCall": 14,
+      "effectiveStack": 74,
+      "rawEquityPct": 82,
+      "topology": {
+        "initialFlopPlayers": 2,
+        "currentActivePlayers": 2,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "IP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "GGPOKER_HIGH_RAKE",
+      "street": "Turn"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "All-in",
+    "recommendedSizing": "74 BB ($7.40 USD)",
+    "structuralExplanation": "Con SPR = 1.76 (COMMITTED_LOW_SPR, <= 3.5), el pozo está completamente comprometido para un overpair fuerte como AA (que además bloquea AsXs de color de picas). Solo pagar la block-bet de 14 BB permite que proyectos de color y escalera realicen equity gratis o que una carta fea en River congele los pagos de KJ/AJ/QQ. Ir All-in cobra el máximo valor ahora.",
+    "redTeamAlert": "Si el stack efectivo hubiera sido 190 BB (SPR > 4.5), ir All-in en Turn aislaría casi únicamente contra sets (JJ/88/55) y convertiría el overpair en un bluff involuntario frente al tope de su rango."
+  },
+  {
+    "id": "gg-3bp-02",
+    "regime": "GGPOKER_HIGH_RAKE",
+    "module": "THREE_BET_POT",
+    "title": "3-Bet Pot OOP: Disciplina con AK en Board Conectado",
+    "street": "Turn",
+    "blindStructure": {
+      "id": "gg-nl10-usd",
+      "label": "NL10 $0.05/$0.10 USD",
+      "currency": "USD",
+      "smallBlind": 0.05,
+      "bigBlind": 0.1,
+      "rakePct": 5,
+      "rakeCapBb": 3
+    },
+    "heroPosition": "BB",
+    "heroCards": ["Ad", "Kc"],
+    "boardCards": ["9s", "8s", "6d", "2h"],
+    "actionHistory": [
+      "BTN abrió 2.5 BB, BB 3-beteó a 11 BB, BTN pagó (pozo: 23 BB)",
+      "Flop 9s8s6d: check-check. Turn 2h: Hero checkea OOP, BTN apuesta 17 BB"
+    ],
+    "villain": {
+      "name": "Regular BTN 3-Bet Call",
+      "position": "BTN",
+      "archetype": "TAG-Regular",
+      "tendencySummary": "Rango de pago al 3-bet cargado de suited connectors (98s, 87s, T9s, 76s, 99, 88) que conectan brutalmente este board.",
+      "statsBadge": "SPR 3.87 / Board Conectado"
+    },
+    "topology": {
+      "initialFlopPlayers": 2,
+      "currentActivePlayers": 2,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "OOP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 23,
+      "villainBet": 17,
+      "heroCall": 17,
+      "effectiveStack": 89,
+      "rawEquityPct": 24,
+      "topology": {
+        "initialFlopPlayers": 2,
+        "currentActivePlayers": 2,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "OOP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "GGPOKER_HIGH_RAKE",
+      "street": "Turn"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Fold",
+    "recommendedSizing": null,
+    "structuralExplanation": "En un tablero 9s8s6d2h, la ventaja de rango y nuts pertenece abrumadoramente al caller en BTN. Con SPR 3.87 (MEDIUM_SPR_CAUTION) y OOP (EQR = 0.84), tu AdKc sin pica ni proyecto realiza solo 20.2% de equity frente a 29.8% de Pot Odds (-5.51 BB de EV). No debes pagar por MDF con aire puro sin bloqueadores relevantes; defiende tus pares altos y draws.",
+    "redTeamAlert": "Si BTN stabbea con el 100% de sus broadways tras tu check en Flop y abandona en River, podrías considerar check-raise semibluff si tuvieras AsKc con la pica, pero nunca un call pasivo OOP con AK offsuit sin proyecto."
+  },
+  {
+    "id": "gg-ovb-01",
+    "regime": "GGPOKER_HIGH_RAKE",
+    "module": "OVERBET_DEFENSE",
+    "title": "Defensa vs Overbet 150% con Blocker Nut Flush",
+    "street": "River",
+    "blindStructure": {
+      "id": "gg-nl10-usd",
+      "label": "NL10 $0.05/$0.10 USD",
+      "currency": "USD",
+      "smallBlind": 0.05,
+      "bigBlind": 0.1,
+      "rakePct": 5,
+      "rakeCapBb": 3
+    },
+    "heroPosition": "BB",
+    "heroCards": ["Ah", "Td"],
+    "boardCards": ["Ts", "8h", "5h", "2d", "Kh"],
+    "actionHistory": [
+      "BTN vs BB en SRP (Flop y Turn apostados por BTN, pozo en River: 30 BB)",
+      "River Kh completa el color de corazones: BTN mete Overbet de 45 BB (150% pot)",
+      "Hero en BB tiene AhTd (65 BB efectivas)"
+    ],
+    "villain": {
+      "name": "Reg Polarizado BTN",
+      "position": "BTN",
+      "archetype": "Pool-6Max-Reg",
+      "tendencySummary": "Usa Overbets en River cuando se completa el color frontal, polarizado entre flushes altos y proyectos de escalera fallidos.",
+      "statsBadge": "River Overbet 150% / Polar"
+    },
+    "topology": {
+      "initialFlopPlayers": 2,
+      "currentActivePlayers": 2,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "OOP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 30,
+      "villainBet": 45,
+      "heroCall": 45,
+      "effectiveStack": 65,
+      "rawEquityPct": 52,
+      "topology": {
+        "initialFlopPlayers": 2,
+        "currentActivePlayers": 2,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "OOP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "GGPOKER_HIGH_RAKE",
+      "street": "River"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Call",
+    "recommendedSizing": null,
+    "structuralExplanation": "Contra una Overbet del 150% (45 BB en 30 BB), la MDF cae al 40.0%, las Pot Odds son 37.5% y el rival tiene permitido un 37.5% de faroles (0.60 bluffs por cada combo de valor). En River realizas el 100% de tu equity (EQR = 1.00 -> 52.0%): el Ah elimina todos los colores máximos (AhXh) de su rango de valor mientras deja libres sus proyectos de escalera fallidos (97, 76, QJ, J9). EV del call: +17.40 BB.",
+    "redTeamAlert": "En límites bajos donde el pool humano sub-bluffea Overbets del 150% en River (ratio real < 20% bluffs en lugar del 37.5% óptimo), incluso el mejor blocker Ah empieza a perder margen frente a jugadores extremadamente nits."
+  },
+  {
+    "id": "gg-ovb-02",
+    "regime": "GGPOKER_HIGH_RAKE",
+    "module": "OVERBET_DEFENSE",
+    "title": "Overbet 125% en Turn: Blocker Inverso de Bluff",
+    "street": "Turn",
+    "blindStructure": {
+      "id": "gg-nl10-usd",
+      "label": "NL10 $0.05/$0.10 USD",
+      "currency": "USD",
+      "smallBlind": 0.05,
+      "bigBlind": 0.1,
+      "rakePct": 5,
+      "rakeCapBb": 3
+    },
+    "heroPosition": "BB",
+    "heroCards": ["Qh", "Ts"],
+    "boardCards": ["Qd", "9s", "5s", "2c"],
+    "actionHistory": [
+      "CO abrió, BB pagó. Flop Qd9s5s: check-call a c-bet (pozo: 18 BB)",
+      "Turn 2c: Hero checkea OOP, CO dispara Overbet de 22.5 BB (125% pot)",
+      "Hero en BB tiene QhTs (75 BB efectivas)"
+    ],
+    "villain": {
+      "name": "Regular CO 6-Max",
+      "position": "CO",
+      "archetype": "TAG-Regular",
+      "tendencySummary": "Overbetea Turn con valor fuerte (AQ, KQ, 99, 55, Q9s) y semi-bluffs de proyecto de picas/JTs.",
+      "statsBadge": "Turn Overbet 125% Pot"
+    },
+    "topology": {
+      "initialFlopPlayers": 2,
+      "currentActivePlayers": 2,
+      "playersToActBehind": 0,
+      "heroRelativePosition": "OOP",
+      "isTransitionedToHU": false,
+      "transitionStreet": null,
+      "rangeFilterNote": null
+    },
+    "mathInput": {
+      "currentPot": 18,
+      "villainBet": 22.5,
+      "heroCall": 22.5,
+      "effectiveStack": 75,
+      "rawEquityPct": 32,
+      "topology": {
+        "initialFlopPlayers": 2,
+        "currentActivePlayers": 2,
+        "playersToActBehind": 0,
+        "heroRelativePosition": "OOP",
+        "isTransitionedToHU": false,
+        "transitionStreet": null,
+        "rangeFilterNote": null
+      },
+      "regime": "GGPOKER_HIGH_RAKE",
+      "street": "Turn"
+    },
+    "availableActions": ["Fold", "Call", "Raise", "All-in"],
+    "correctAction": "Fold",
+    "recommendedSizing": null,
+    "structuralExplanation": "Aunque QhTs es Top Pair kicker decente, sufre un efecto de blocker inverso severo: la Ts en tu mano bloquea los semi-bluffs más frecuentes de CO (AsTs, KsTs, JsTs, Ts8s y combos de JTo). Al mismo tiempo estás OOP (EQR = 0.84) frente a una Overbet que exige 35.7% de Pot Odds, mientras tu equity realizada es 26.9% (-5.57 BB de EV). Defiende en su lugar QJ/KQ/9x o combos con pica propia.",
+    "redTeamAlert": "Si el rival en CO abusa de la Overbet 125% en Turn con cualquier pareja media o aire sin proyecto de picas (over-bluffing > 40%), incluso QT sin buenos blockers debe rotar al rango de check-call."
+  }
+]
